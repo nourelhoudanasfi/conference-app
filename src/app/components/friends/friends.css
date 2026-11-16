@@ -1,0 +1,30 @@
+:host {
+  display: block;
+}
+
+.friends__content {
+  flex: 1;
+}
+
+.friends__search {
+  padding: 0.3rem 0.6rem;
+  font-family: inherit;
+  font-size: 0.8rem;
+  border: 1px solid #9ca3af;
+  border-radius: 4px;
+  width: 100%;
+  max-width: 320px;
+  box-sizing: border-box;
+}
+
+.friends__list {
+  margin: 0.6rem 0 0;
+  padding-left: 1.2rem;
+  font-size: 0.85rem;
+  line-height: 1.6;
+}
+
+.friends__empty {
+  color: #6b7280;
+  font-style: italic;
+}
