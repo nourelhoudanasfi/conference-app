@@ -1,17 +1,14 @@
-<section class="section section--orange">
-  <div class="icon-circle icon-orange">🔔</div>
+<section class="card" id="notifications">
+  <div class="icon">🔔</div>
   <div>
     <h2>Zone de notifications</h2>
-    <p>Vous avez {{ notifications.length }} nouvelles notifications.</p>
-    <button (click)="toggle()">
-      {{ showList() ? 'Masquer les notifications' : 'Afficher les notifications' }}
-    </button>
-    @if (showList()) {
-      <ul>
-        @for (n of notifications; track n) {
-          <li>{{ n }}</li>
-        }
-      </ul>
+    <p>Vous avez {{ notificationList().length }} nouvelles notifications.</p>
+    <button class ="btn btn-primary" (click)="showNotifications()">{{ bTnTxt }}</button>
+    @if (show()) {
+      @for(item of notificationList(); track item) {
+        <p class="notification"> {{ item.message }}</p>
+      }
+      
     }
   </div>
 </section>

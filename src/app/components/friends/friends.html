@@ -1,25 +1,16 @@
-<section class="section section--green">
-  <div class="icon-circle icon-green">👥</div>
-
-  <div class="friends__content">
+<section class="card" id="amis">
+  <div class="icon">👥</div>
+  <div>
     <h2>Liste des amis</h2>
 
-    <!-- Two-way binding -->
-    <input
-      class="friends__search"
-      type="text"
-      placeholder="Rechercher un ami..."
-      [(ngModel)]="searchTerm"
-    />
-
-    @if (filteredFriends().length === 0) {
-      <p class="friends__empty">Aucun ami trouvé.</p>
-    } @else {
-      <ul class="friends__list">
-        @for (friend of filteredFriends(); track friend.name) {
-          <li>{{ friend.name }}</li>
-        }
-      </ul>
+    @for (item of FriendsList; track item.name) {
+      <input type="text" [(ngModel)]="item.name">
     }
+
+    <ul>
+      @for (item of FriendsList; track item.name) {
+        <li>{{ item.name }}</li>
+      }
+    </ul>
   </div>
 </section>

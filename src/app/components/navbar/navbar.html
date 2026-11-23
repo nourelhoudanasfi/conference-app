@@ -1,10 +1,9 @@
 <nav class="navbar">
-  <!-- @for : contrôle de flux natif pour parcourir le menu -->
   @for (item of listItems; track item.name) {
-    <!-- [class.active] : class binding ; (click) : event binding -->
     <a
-      [class.active]="activeItem() === item.name"
-      (click)="setActive(item.name)"
+      [routerLink]="item.link"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
     >{{ item.name }}</a>
   }
 </nav>

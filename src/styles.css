@@ -1,11 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
 body {
   margin: 0;
-  font-family: Georgia, 'Times New Roman', serif;
-  background: #f5f7fa;
-  color: #1f2937;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4f7fb;
 }
-
 .app {
   max-width: 900px;
   margin: 0 auto;
@@ -55,3 +53,6 @@ body {
 .icon-blue   { background: #e6edfa; }
 .icon-green  { background: #e0f5ec; }
 .icon-orange { background: #fdf1d8; }
+html {
+  scroll-behavior: smooth;
+}

@@ -6,14 +6,18 @@ import { Component, signal } from '@angular/core';
   styleUrl: './notifications.css',
 })
 export class Notifications {
-  showList = signal(false);
+notificationList = signal([
+    {message: 'une nouvelle conference est disponible  .'},
+    {message: 'Sami vous a envoye une invitation '},
+    {message: 'Votre profil  à ete mis a jour avec succes.'},
+  ]);
+ show=signal (false);
+ bTnTxt=('Afficher les notifications');
 
-  notifications = [
-    'Votre inscription à "Angular 21 Conference" est confirmée.',
-    'Nouvelle conférence ajoutée : "Signals Workshop".',
-  ];
 
-  toggle(): void {
-    this.showList.update((v) => !v);
+ 
+showNotifications() {
+  this.show.set(!this.show());
+  this.bTnTxt = this.show() ? 'Masquer les notifications' : 'Afficher les notifications';
   }
 }

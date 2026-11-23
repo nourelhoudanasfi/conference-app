@@ -8,5 +8,6 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './profil.css',
 })
 export class Profil {
-  user = { name: 'Ahmed', email: 'ahmed@email.com' };
+ // profil.ts
+user = { name: 'Ahmed', email: 'Ahmed@esprit.tn' };
 }
